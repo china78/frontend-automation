@@ -10,9 +10,14 @@ module.exports = {
     path: path.resolve(__dirname, 'dist')
   },
   devtool: 'inline-source-map',
-  optimization: {
+  optimization: { 
     minimize: true,
     minimizer: [new TerserWebpackPlugin()]
+  },
+  devServer: {
+    static: {
+      directory: path.join(__dirname, 'dist'),
+    },
   },
   module: {
     rules: [
