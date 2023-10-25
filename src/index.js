@@ -2,13 +2,13 @@ import { getWorkList } from "./data";
 import './style.css';
 import deadlift from './assets/images/deadlift.jpeg';
 
-const datas = getWorkList();
+const data = getWorkList();
 
 const ul = document.createElement('ul');
 
-datas.forEach(data => {
+data.forEach(power => {
   const li = document.createElement('li');
-  li.innerHTML = data;
+  li.innerHTML = power;
   ul.appendChild(li);
 })
 
