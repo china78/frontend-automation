@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const TerserWebpackPlugin = require('terser-webpack-plugin');
+const WebpackBundleAnalyzerPlugin = require('webpack-bundle-analyzer');
 
 module.exports = {
   mode: 'development',
@@ -49,7 +50,8 @@ module.exports = {
       }
     ]
   },
-  plugins: [new HtmlWebpackPlugin({
-    title: "前端自动化"
-  })]
+  plugins: [
+    new HtmlWebpackPlugin({ title: "前端自动化"}),
+    new WebpackBundleAnalyzerPlugin.BundleAnalyzerPlugin()
+  ]
 }
