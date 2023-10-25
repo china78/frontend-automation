@@ -16,11 +16,15 @@
 
 /*! ../node_modules/css-loader/dist/runtime/sourceMaps.js */
 
-/*! ./assets/images/deadlift.jpeg */
-
 /*! ./data */
 
 /*! ./style.css */
+
+/*! @/assets/images/deadlift.jpeg */
+
+/*! @/test/date/printDate.js */
+
+/*! @/utils/date/getDate.js */
 
 /*!*********************!*\
   !*** ./src/data.js ***!
@@ -33,6 +37,14 @@
 /*!***********************!*\
   !*** ./src/style.css ***!
   \***********************/
+
+/*!***********************************!*\
+  !*** ./src/utils/date/getDate.js ***!
+  \***********************************/
+
+/*!************************************!*\
+  !*** ./src/test/date/printDate.js ***!
+  \************************************/
 
 /*!*****************************************!*\
   !*** ./src/assets/images/deadlift.jpeg ***!

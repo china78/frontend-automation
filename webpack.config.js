@@ -14,6 +14,12 @@ module.exports = {
     minimize: true,
     minimizer: [new TerserWebpackPlugin()]
   },
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, 'src'),
+      utils: path.resolve(__dirname, 'src/utils/'),
+    },
+  },
   devServer: {
     static: {
       directory: path.join(__dirname, 'dist'),

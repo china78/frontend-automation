@@ -1,6 +1,7 @@
 import { getWorkList } from "./data";
 import './style.css';
-import deadlift from './assets/images/deadlift.jpeg';
+import deadlift from '@/assets/images/deadlift.jpeg';
+import '@/test/date/printDate.js';
 
 const data = getWorkList();
 
