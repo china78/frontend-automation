@@ -47,7 +47,11 @@ module.exports = {
             ]
           }
         }
-      }
+      },
+      {
+        test: /\.ts$/,
+        use: ['ts-loader'],
+      },
     ]
   },
   plugins: [

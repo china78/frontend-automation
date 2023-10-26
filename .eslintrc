@@ -1,0 +1,27 @@
+// 该配置项主要用于指示此.eslintrc文件是 Eslint 在项目内使用的根级别文件，并且 Eslint 不应该在该目录之外搜索配置文件
+{
+  "root": true,
+  // 默认情况下 Eslint 使用其内置的 Espree解析器，该解析器与标准 Javascript 运行时和版本兼容
+  // 而我们需要将 ts 代码解析为 eslint 兼容的AST，所以此处我们使用 @typescript-eslint/parser
+  "parser": "@typescript-eslint/parser",
+  // 该配置项告诉 eslint 我们拓展了哪些配置级
+  // eslint:recommended: 该配置集是 eslint 内置的推荐，它打开一组小的、合理的规则，用于检查众所周知的最佳实践
+  // @typescript-eslint/recommended: 该配置集是 typescript-eslint 的推荐，它与 eslint:recommended 相似，但它启用了特定于ts的规则
+  // @typescript-eslint/eslint-recommended: 该配置集禁用 eslint:recommended 中已经由 typescript 处理的规则
+  // 防止eslint 和 typescript 之间有冲突
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/eslint-recommended"
+  ],
+  // 该配置项指示要加载的插件
+  // @typescript-eslint 可以让我们在长储存库中使用 typescript-eslint包 定义的规则集
+  "plugins": ["@typescript-eslint"],
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "rules": {
+    "@typescript-eslint/no-var-requires": 0
+  }
+}
