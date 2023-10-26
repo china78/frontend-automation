@@ -1,4 +1,8 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-yarn run lint
+# 未安装lint-staged之前，eslint扫描全部文件
+# yarn run lint
+
+# lint-staged只检查修改的文件
+npx lint-staged
