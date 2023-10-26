@@ -8,12 +8,12 @@ module.exports = {
   entry: './src/index.js',
   output: {
     filename: 'bundle.js',
-    path: path.resolve(__dirname, 'dist')
+    path: path.resolve(__dirname, 'dist'),
   },
   devtool: 'inline-source-map',
-  optimization: { 
+  optimization: {
     minimize: true,
-    minimizer: [new TerserWebpackPlugin()]
+    minimizer: [new TerserWebpackPlugin()],
   },
   resolve: {
     alias: {
@@ -30,11 +30,11 @@ module.exports = {
     rules: [
       {
         test: /\.css$/i,
-        use: ['style-loader', 'css-loader']
+        use: ['style-loader', 'css-loader'],
       },
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
-        type: "asset/resource"
+        type: 'asset/resource',
       },
       {
         test: /\.(?:js|mjs|cjs)$/,
@@ -42,20 +42,18 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: [
-              ['@babel/preset-env']
-            ]
-          }
-        }
+            presets: [['@babel/preset-env']],
+          },
+        },
       },
       {
         test: /\.ts$/,
         use: ['ts-loader'],
       },
-    ]
+    ],
   },
   plugins: [
-    new HtmlWebpackPlugin({ title: "前端自动化"}),
-    new WebpackBundleAnalyzerPlugin.BundleAnalyzerPlugin()
-  ]
-}
+    new HtmlWebpackPlugin({ title: '前端自动化' }),
+    new WebpackBundleAnalyzerPlugin.BundleAnalyzerPlugin(),
+  ],
+};

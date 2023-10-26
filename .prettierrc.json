@@ -1,0 +1,10 @@
+{
+  "__comment__": "查阅链接https://prettier.io/docs/en/options了解prettier各项配置",
+  "printWidth": 80,
+  "tabWidth": 2,
+  "useTabs": false,
+  "semi": true,
+  "bracketSpacing": true,
+  "arrowParens": "always",
+  "singleQuote": true
+}

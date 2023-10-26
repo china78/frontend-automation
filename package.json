@@ -6,7 +6,8 @@
   "scripts": {
     "start": "webpack serve --open",
     "__eslit__comment__": "查阅eslint文档 https://eslint.org/docs/latest/use/command-line-interface 了解cli工具的options",
-    "lint": "eslint ./ --ext .ts,.js,.json --max-warnings=0"
+    "lint": "eslint ./ --ext .ts,.js,.json --max-warnings=0",
+    "format": "prettier --config .prettierrc.json '.' --write"
   },
   "devDependencies": {
     "@babel/core": "^7.23.2",
@@ -17,6 +18,7 @@
     "css-loader": "^6.8.1",
     "eslint": "^8.52.0",
     "html-webpack-plugin": "^5.5.3",
+    "prettier": "^3.0.3",
     "style-loader": "^3.3.3",
     "terser-webpack-plugin": "^5.3.9",
     "ts-loader": "^9.5.0",
