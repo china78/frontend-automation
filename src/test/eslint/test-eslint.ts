@@ -1,7 +1,5 @@
 function TestEslint() {
-
-  console.log('test-eslint')
-
-
-  
+  console.log('test-eslint');
 }
+
+TestEslint();
